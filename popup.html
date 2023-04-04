@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: "Bukhari Script";
+        src: url("./assets/font/bukhari_script-webfont.woff2") format("woff2"),
+          url("./assets/font/bukhari_script-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        background-image: url("./images/html/niet_background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        color: aliceblue;
+      }
+      .container {
+        width: 40ch;
+        background-color: rgba(4, 35, 88, 0.726);
+        padding: 20px;
+        border-radius: 10px;
+        /* display: flex; */
+        /* flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffde59;
+      }
+      img {
+        max-width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+      }
+
+      .logo {
+        font-size: 2em;
+        font-family: "Bukhari Script", sans-serif;
+      }
+
+      #clicked {
+        display: none;
+      }
+    </style>
+    <div class="container">
+      <h2 class="flex"><span class="logo">NIET</span> Attendance</h2>
+      <p>View the previously hidden attendance on NIET ERP.</p>
+
+      <button id="btn">Hide Page</button>
+      <img id="clicked" src="./images/html/rock.gif" alt="" />
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
