@@ -3,11 +3,37 @@
   "name": "NIET Attendance",
   "version": "1.0",
   "description": "View Attendance on NIET ERP",
+
   "icons": {
     "16": "images/icons/icon-16x16.png",
     "32": "images/icons/icon-32x32.png",
     "48": "images/icons/icon-48x48.png",
     "128": "images/icons/icon-128x128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/icons/default/icon.png",
+      "32": "images/icons/default/icon.png",
+      "48": "images/icons/default/icon.png",
+      "128": "images/icons/default/icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "NIET Attendance"
+  },
+
+  "permissions": ["tabs"],
+
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
