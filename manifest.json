@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "NIET Attendance",
-  "version": "2.0",
-  "description": "View Attendance on NIET ERP",
+  "version": "3.0",
+  "description": "View Attendance on NIET ERP, without editing any source code.",
 
   "icons": {
     "16": "assets/icons/icon-16x16.png",
@@ -21,7 +21,7 @@
     "default_title": "NIET Attendance"
   },
 
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
 
   "web_accessible_resources": [
     {
@@ -46,9 +46,13 @@
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "https://niet.instituteoncloud.com/Dashboard/StudentDashboard*",
-        "https://niet.instituteoncloud.com/AttendanceReport/*"
+        "https://niet.instituteoncloud.com/Dashboard/StudentDashboard*"
       ]
+    },
+    {
+      "js": ["scripts/content_attendance.js"],
+      "matches": ["https://niet.instituteoncloud.com/AttendanceReport/*"],
+      "css": ["attendance.css"]
     }
   ]
 }
