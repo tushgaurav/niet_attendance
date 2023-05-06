@@ -1,5 +1,8 @@
 const studentAttendance = "https://niet.instituteoncloud.com/";
 
+const renderAttendanceDisplayLink =
+  "https://niet.instituteoncloud.com/AttendanceReport/GetAcademicSemster";
+
 // execute on every tab change
 chrome.tabs.onActivated.addListener(async function (activeInfo) {
   chrome.tabs.query(
@@ -10,6 +13,7 @@ chrome.tabs.onActivated.addListener(async function (activeInfo) {
       if (tab[0].url.startsWith(studentAttendance)) {
         // set the title and badge
         chrome.action.setTitle({ title: "NIET ERP Page: Attendance Visible" });
+
         chrome.action.setBadgeText({
           text: "ERP",
         });
