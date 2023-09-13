@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NIET Attendance",
-  "version": "3.0",
+  "version": "3.1",
   "description": "View Attendance on NIET ERP, without editing any source code.",
 
   "icons": {
@@ -45,14 +45,7 @@
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
-      "matches": [
-        "https://niet.instituteoncloud.com/Dashboard/StudentDashboard*"
-      ]
-    },
-    {
-      "js": ["scripts/content_attendance.js"],
-      "matches": ["https://niet.instituteoncloud.com/AttendanceReport/*"],
-      "css": ["attendance.css"]
+      "matches": ["https://niet.instituteoncloud.com/*"]
     }
   ]
 }

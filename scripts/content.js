@@ -1,14 +1,23 @@
-// After NIET has removed the previous working link
-const link = document.querySelector(
-  "#js-page-content > div:nth-child(5) > div.col-sm-3.col-xl-3 > a"
+// NIET Attendance: Content Script
+
+// set display:none to display:block
+let attendance_link = document.querySelector(
+  "#js-page-content > div:nth-child(6) > div.col-xl-12"
+);
+attendance_link.style.display = "block";
+
+// fixing the attendance table header widht
+let table_container = document.querySelector(
+  "#tblDetails1_wrapper > div:nth-child(2) > div > div > div.dataTables_scrollHead > div"
 );
 
-try {
-  link.href =
-    "https://niet.instituteoncloud.com/AttendanceReport/GetAcademicSemster?Type=GetStudentSemesterAttedance&Semester=10010000006";
-} catch {}
+table_container.style.width = "100%";
 
-const attendance_link = document.querySelector("div.col-sm-3.col-xl-3");
+let table_head = document.querySelector(
+  "#tblDetails1_wrapper > div:nth-child(2) > div > div > div.dataTables_scrollHead > div > table"
+);
+
+table_head.style.width = "100%";
 
 // Get student name for later use
 try {
